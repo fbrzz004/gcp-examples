@@ -1,6 +1,3 @@
-variable "instance_count" {
-  default = 24
-}
 
 provider "google" {
   project     = var.project_id
@@ -15,7 +12,7 @@ resource "google_compute_instance" "vm_example" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = "debian-cloud/debian-12"
     }
   }
 
